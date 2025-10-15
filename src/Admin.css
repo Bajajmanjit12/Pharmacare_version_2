@@ -1,0 +1,104 @@
+
+/* ---------- Page Wrapper ---------- */
+.admin-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full viewport height */
+    background: linear-gradient(135deg, #e3f2fd, #f1f8e9, #fffde7);
+}
+
+/* ---------- Admin Box ---------- */
+.admin-box {
+    width: 100%;
+    max-width: 400px; /* compact width */
+    background: #f7f4f4;
+    border-radius: 16px;
+    padding: 40px 32px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Heading ---------- */
+.admin-box h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0288d1; /* theme blue */
+}
+
+.admin-box .login-sub {
+    font-size: 0.95rem;
+    color: #2e7d32; /* theme green */
+}
+
+/* ---------- Form ---------- */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 1px solid #dfe1e6;
+    background: #f9fafc;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    color: #333; /* <-- Add this line for dark input text */
+}
+.login-form input:focus {
+    border-color: #0288d1;
+    box-shadow: 0 4px 16px rgba(2, 136, 209, 0.1);
+}
+
+/* ---------- Submit Button ---------- */
+.login-form button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #151414;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #aed581, #c5e1a5); /* theme green */
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #c5e1a5, #aed581);
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 500px) {
+    .admin-box {
+        padding: 30px 20px;
+        max-width: 95%;
+    }
+    .admin-box h2 {
+        font-size: 1.6rem;
+    }
+    .login-form input {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+    .login-form button[type="submit"] {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}

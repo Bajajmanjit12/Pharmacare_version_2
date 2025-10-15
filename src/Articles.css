@@ -1,0 +1,155 @@
+.articles-page {
+    width: 100%;
+    padding: 40px 20px;
+    font-family: "Poppins", sans-serif;
+    background: #f8faff;
+}
+
+/* Page heading */
+.page-heading {
+        font-size: 32px;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Category Section */
+.category-section {
+    margin-bottom: 60px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px 30px;
+    transition: 0.3s ease;
+}
+
+/* Category Title Styles (distinct gradients per category) */
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f3c88;
+    border-radius: 10px;
+    padding: 14px 22px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+}
+
+/* Unique Category Gradients */
+.category-title.articles { background: linear-gradient(90deg, #1f3c88, #3c6ad8); }
+.category-title.clinical { background: linear-gradient(90deg, #1d976c, #93f9b9); }
+.category-title.business { background: linear-gradient(90deg, #ff7e5f, #feb47b); }
+.category-title.policy { background: linear-gradient(90deg, #ff4b2b, #ff416c); }
+.category-title.education { background: linear-gradient(90deg, #f7971e, #ffd200); color: #333; }
+.category-title.opinion { background: linear-gradient(90deg, #a770ef, #cf8bf3, #fdb99b); }
+
+/* Scrollable container */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+/* Article Cards */
+.article-card {
+    background: #fff;
+    border-radius: 12px;
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 22px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-top: 5px solid #1f3c88;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.article-card h3 {
+    color: #1d3557;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.article-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 650px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    animation: popIn 0.3s ease;
+}
+
+.modal-content h2 {
+    color: #1d3557;
+    margin-bottom: 10px;
+}
+
+.modal-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.modal-text {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    background: #1f3c88;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 600;
+}
+
+.close-btn:hover {
+    background: #3c6ad8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,113 @@
+
+    /* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #e3f2fd, #f1f8e9, #fffde7);
+    padding: 12px 25px;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    transition: background 0.4s ease-in-out;
+}
+
+/* Brand */
+.navbar-left .brand {
+    font-size: 26px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00796b, #0288d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-left .brand:hover {
+    transform: scale(1.08);
+}
+
+/* Center Links */
+.navbar-center {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.navbar-center a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Elegant Hover Effect */
+.navbar-center a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #0288d1, #00796b);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-center a:hover {
+    color: #0288d1;
+}
+
+.navbar-center a:hover::after {
+    width: 100%;
+}
+
+/* Admin Button */
+.admin-btn {
+    background: linear-gradient(45deg, #0288d1, #26c6da);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(2, 136, 209, 0.2);
+}
+
+.admin-btn:hover {
+    background: linear-gradient(45deg, #26c6da, #0288d1);
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 15px rgba(38, 198, 218, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .navbar-center {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .navbar-right {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .admin-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}

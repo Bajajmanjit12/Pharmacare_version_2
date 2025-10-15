@@ -1,0 +1,126 @@
+/* Page styling same as before */
+.special-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd, #f1f8e9, #fffde7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Title */
+.special-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #0288d1;
+    margin-bottom: 30px;
+}
+
+/* Year Selector */
+.year-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px; /* bigger spacing for visual clarity */
+}
+
+.year-selector-container label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0077b6;
+}
+
+.year-selector {
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #0077b6;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Tabs Wrapper */
+.tabs-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+/* Tabs Container */
+.tabs-container {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.tabs-container::-webkit-scrollbar { display: none; }
+.tabs-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Tab Cards */
+.tab-card {
+    min-width: 260px;
+    max-width: 280px;
+    height: 380px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.tab-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* PDF Preview */
+.tab-preview {
+    width: 100%;
+    height: 270px;
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Tab Title */
+.tab-title { font-size: 18px; font-weight: bold; color: #0077b6; text-align: center; }
+
+/* Scroll Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 18px;
+    font-size: 26px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #0077b6, #28a745);
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.scroll-btn:hover { opacity: 1; }
+.left-scroll { left: -20px; }
+.right-scroll { right: -20px; }
+
+/* No editions message */
+.no-editions { font-size: 20px; color: #555; margin: 40px 0; }

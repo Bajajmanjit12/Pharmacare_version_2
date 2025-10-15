@@ -1,0 +1,179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd, #f1f8e9, #fffde7); /* SAME as home */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    gap: 60px;
+}
+
+/* Founder Side */
+.founder-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.founder-photo-wrapper {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 5px solid #c5e1a5;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.founder-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.founder-photo-wrapper:hover .founder-photo {
+    transform: scale(1.05);
+}
+
+.founder-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 5px;
+}
+
+.founder-title {
+    font-size: 1.2rem;
+    color: #558b2f;
+}
+
+/* Vision Side */
+.vision-side {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vision-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0288d1;
+    margin-bottom: 20px;
+}
+
+.vision-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.editors p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vision-side {
+        margin-top: 40px;
+    }
+
+    .founder-photo-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .founder-name {
+        font-size: 1.8rem;
+    }
+
+    .founder-title {
+        font-size: 1rem;
+    }
+
+    .vision-title {
+        font-size: 2rem;
+    }
+
+    .vision-description {
+        font-size: 1.1rem;
+    }
+
+    .editors p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* 8 bubbles with shades matching theme */
+.bubble1 { width: 50px; height: 50px; background: rgba(2,136,209,0.3); left: 10%; animation: float1 20s infinite; }
+.bubble2 { width: 35px; height: 35px; background: rgba(38,198,218,0.3); left: 25%; animation: float2 18s infinite; }
+.bubble3 { width: 60px; height: 60px; background: rgba(205,230,197,0.4); left: 40%; animation: float3 22s infinite; }
+.bubble4 { width: 30px; height: 30px; background: rgba(174,213,129,0.35); left: 55%; animation: float4 19s infinite; }
+.bubble5 { width: 45px; height: 45px; background: rgba(38,198,218,0.25); left: 70%; animation: float1 21s infinite; }
+.bubble6 { width: 25px; height: 25px; background: rgba(2,136,209,0.2); left: 82%; animation: float2 17s infinite; }
+.bubble7 { width: 40px; height: 40px; background: rgba(174,213,129,0.3); left: 60%; animation: float3 20s infinite; }
+.bubble8 { width: 55px; height: 55px; background: rgba(205,230,197,0.3); left: 35%; animation: float4 23s infinite; }
+
+/* Smooth curved floating animations */
+@keyframes float1 {
+    0% { transform: translate(0,0) scale(0.6); opacity:0; }
+    25% { opacity:0.4; }
+    50% { transform: translate(30px,-50vh) scale(0.8); opacity:0.7; }
+    75% { opacity:0.4; }
+    100% { transform: translate(-20px,-100vh) scale(1); opacity:0; }
+}
+
+@keyframes float2 {
+    0% { transform: translate(0,0) scale(0.5); opacity:0; }
+    25% { opacity:0.5; }
+    50% { transform: translate(-30px,-55vh) scale(0.7); opacity:0.8; }
+    75% { opacity:0.4; }
+    100% { transform: translate(20px,-105vh) scale(0.9); opacity:0; }
+}
+
+@keyframes float3 {
+    0% { transform: translate(0,0) scale(0.7); opacity:0; }
+    25% { opacity:0.4; }
+    50% { transform: translate(25px,-60vh) scale(1); opacity:0.7; }
+    75% { opacity:0.5; }
+    100% { transform: translate(-15px,-110vh) scale(0.8); opacity:0; }
+}
+
+@keyframes float4 {
+    0% { transform: translate(0,0) scale(0.6); opacity:0; }
+    25% { opacity:0.5; }
+    50% { transform: translate(-20px,-50vh) scale(0.9); opacity:0.8; }
+    75% { opacity:0.4; }
+    100% { transform: translate(25px,-100vh) scale(1); opacity:0; }
+}
